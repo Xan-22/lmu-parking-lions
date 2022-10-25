@@ -14,6 +14,10 @@
 		23813B6728F655D200374F01 /* ParkingLionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B6628F655D200374F01 /* ParkingLionsTests.swift */; };
 		23813B7128F655D200374F01 /* ParkingLionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B7028F655D200374F01 /* ParkingLionsUITests.swift */; };
 		23813B7328F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */; };
+		23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3BE29078560006E4F5B /* SetupView.swift */; };
+		23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C02907859B006E4F5B /* LogoView.swift */; };
+		23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C229078854006E4F5B /* SFChoiceView.swift */; };
+		23E4A3C629078DDB006E4F5B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C529078DDB006E4F5B /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		23813B6C28F655D200374F01 /* ParkingLionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingLionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23813B7028F655D200374F01 /* ParkingLionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsUITests.swift; sourceTree = "<group>"; };
 		23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23E4A3BE29078560006E4F5B /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		23E4A3C02907859B006E4F5B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		23E4A3C229078854006E4F5B /* SFChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFChoiceView.swift; sourceTree = "<group>"; };
+		23E4A3C529078DDB006E4F5B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				23813B5528F655CE00374F01 /* ParkingLionsApp.swift */,
-				23813B5728F655CE00374F01 /* ContentView.swift */,
 				23813B5928F655D200374F01 /* Assets.xcassets */,
+				23E4A3B929077F9F006E4F5B /* Firebase Service */,
+				23E4A3B829077F95006E4F5B /* Models */,
+				23E4A3B729077F68006E4F5B /* Views */,
 				23813B5B28F655D200374F01 /* Preview Content */,
 			);
 			path = ParkingLions;
@@ -125,6 +135,40 @@
 				23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */,
 			);
 			path = ParkingLionsUITests;
+			sourceTree = "<group>";
+		};
+		23E4A3B729077F68006E4F5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23813B5728F655CE00374F01 /* ContentView.swift */,
+				23E4A3C529078DDB006E4F5B /* MapView.swift */,
+				23E4A3BE29078560006E4F5B /* SetupView.swift */,
+				23E4A3C42907886D006E4F5B /* Helpers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		23E4A3B829077F95006E4F5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23E4A3B929077F9F006E4F5B /* Firebase Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Firebase Service";
+			sourceTree = "<group>";
+		};
+		23E4A3C42907886D006E4F5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				23E4A3C02907859B006E4F5B /* LogoView.swift */,
+				23E4A3C229078854006E4F5B /* SFChoiceView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */,
+				23E4A3C629078DDB006E4F5B /* MapView.swift in Sources */,
+				23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */,
 				23813B5828F655CE00374F01 /* ContentView.swift in Sources */,
 				23813B5628F655CE00374F01 /* ParkingLionsApp.swift in Sources */,
+				23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
