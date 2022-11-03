@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235190CE29138BBA00B62ABE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235190CD29138BBA00B62ABE /* MapViewModel.swift */; };
 		23813B5628F655CE00374F01 /* ParkingLionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B5528F655CE00374F01 /* ParkingLionsApp.swift */; };
 		23813B5828F655CE00374F01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B5728F655CE00374F01 /* ContentView.swift */; };
 		23813B5A28F655D200374F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23813B5928F655D200374F01 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		235190CD29138BBA00B62ABE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		23813B5228F655CE00374F01 /* ParkingLions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingLions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23813B5528F655CE00374F01 /* ParkingLionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsApp.swift; sourceTree = "<group>"; };
 		23813B5728F655CE00374F01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		23E4A3B829077F95006E4F5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				235190CD29138BBA00B62ABE /* MapViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */,
 				23E4A3C629078DDB006E4F5B /* MapView.swift in Sources */,
 				23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */,
+				235190CE29138BBA00B62ABE /* MapViewModel.swift in Sources */,
 				23813B5828F655CE00374F01 /* ContentView.swift in Sources */,
 				23813B5628F655CE00374F01 /* ParkingLionsApp.swift in Sources */,
 				23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */,
@@ -467,6 +471,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ParkingLions/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to know when you are in an on-campus parking area.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,6 +500,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ParkingLions/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to know when you are in an on-campus parking area.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

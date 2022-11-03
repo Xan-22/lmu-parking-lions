@@ -23,11 +23,7 @@ struct ContentView: View {
     @State var setupComplete = false
     
     var body: some View {
-        if setupComplete == false {
-            SetupView(isStudent: isStudent, complete: setupComplete)
-        } else {
-            MapView()
-        }
+        MapView()
     }
 }
 
