@@ -1,30 +1,27 @@
 //
-//  MapView.swift
+//  BasicMapView.swift
 //  ParkingLions
 //
-//  Created by Xan on 10/24/22.
+//  Created by Xan on 11/6/22.
 //
 
 import SwiftUI
 import MapKit
 
-struct MapView: View {
+struct BasicMapView: View {
     @StateObject private var mapModel = MapViewModel()
-    
     var body: some View {
         Map(coordinateRegion: $mapModel.region, showsUserLocation: true, userTrackingMode: .constant(.follow))
             .ignoresSafeArea()
             .onAppear {
                 mapModel.startLocationService()
             }
-        // TODO: Start annotating map with parking area markers
-        // TODO: Maybe lock the map to the area surrounding LMU?
-        // TODO: Maybe remove all existing map annotations and replace what we want with our own?
+    // TODO: Somehow make this map look nice with our own annotations
     }
 }
 
-struct MapView_Previews: PreviewProvider {
+struct BasicMapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        BasicMapView()
     }
 }

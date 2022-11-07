@@ -15,10 +15,16 @@
 		23813B6728F655D200374F01 /* ParkingLionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B6628F655D200374F01 /* ParkingLionsTests.swift */; };
 		23813B7128F655D200374F01 /* ParkingLionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B7028F655D200374F01 /* ParkingLionsUITests.swift */; };
 		23813B7328F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */; };
+		238915B22918A07500F58A7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238915B12918A07500F58A7B /* MapKit.framework */; };
+		238915B62918A20F00F58A7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238915B52918A20F00F58A7B /* MainView.swift */; };
+		23D11B9C2918BDC200053454 /* BasicMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9B2918BDC200053454 /* BasicMapView.swift */; };
+		23D11B9E2918C2BE00053454 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9D2918C2BE00053454 /* FloatingButton.swift */; };
+		23D11BA02918C66000053454 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9F2918C66000053454 /* ListView.swift */; };
+		23D11BA22918C9C100053454 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11BA12918C9C100053454 /* SettingsView.swift */; };
 		23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3BE29078560006E4F5B /* SetupView.swift */; };
 		23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C02907859B006E4F5B /* LogoView.swift */; };
 		23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C229078854006E4F5B /* SFChoiceView.swift */; };
-		23E4A3C629078DDB006E4F5B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C529078DDB006E4F5B /* MapView.swift */; };
+		23E4A3C629078DDB006E4F5B /* AdvMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C529078DDB006E4F5B /* AdvMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +56,17 @@
 		23813B6C28F655D200374F01 /* ParkingLionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingLionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23813B7028F655D200374F01 /* ParkingLionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsUITests.swift; sourceTree = "<group>"; };
 		23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		238915AF2918A07500F58A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		238915B12918A07500F58A7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		238915B52918A20F00F58A7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		23D11B9B2918BDC200053454 /* BasicMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMapView.swift; sourceTree = "<group>"; };
+		23D11B9D2918C2BE00053454 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		23D11B9F2918C66000053454 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		23D11BA12918C9C100053454 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		23E4A3BE29078560006E4F5B /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		23E4A3C02907859B006E4F5B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		23E4A3C229078854006E4F5B /* SFChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFChoiceView.swift; sourceTree = "<group>"; };
-		23E4A3C529078DDB006E4F5B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		23E4A3C529078DDB006E4F5B /* AdvMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238915B22918A07500F58A7B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +102,7 @@
 				23813B6528F655D200374F01 /* ParkingLionsTests */,
 				23813B6F28F655D200374F01 /* ParkingLionsUITests */,
 				23813B5328F655CE00374F01 /* Products */,
+				238915B02918A07500F58A7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +119,7 @@
 		23813B5428F655CE00374F01 /* ParkingLions */ = {
 			isa = PBXGroup;
 			children = (
+				238915AF2918A07500F58A7B /* Info.plist */,
 				23813B5528F655CE00374F01 /* ParkingLionsApp.swift */,
 				23813B5928F655D200374F01 /* Assets.xcassets */,
 				23E4A3B929077F9F006E4F5B /* Firebase Service */,
@@ -139,11 +155,21 @@
 			path = ParkingLionsUITests;
 			sourceTree = "<group>";
 		};
+		238915B02918A07500F58A7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				238915B12918A07500F58A7B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		23E4A3B729077F68006E4F5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				23813B5728F655CE00374F01 /* ContentView.swift */,
-				23E4A3C529078DDB006E4F5B /* MapView.swift */,
+				238915B52918A20F00F58A7B /* MainView.swift */,
+				23D11B9F2918C66000053454 /* ListView.swift */,
+				23D11BA12918C9C100053454 /* SettingsView.swift */,
 				23E4A3BE29078560006E4F5B /* SetupView.swift */,
 				23E4A3C42907886D006E4F5B /* Helpers */,
 			);
@@ -168,8 +194,11 @@
 		23E4A3C42907886D006E4F5B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				23E4A3C529078DDB006E4F5B /* AdvMapView.swift */,
+				23D11B9B2918BDC200053454 /* BasicMapView.swift */,
 				23E4A3C02907859B006E4F5B /* LogoView.swift */,
 				23E4A3C229078854006E4F5B /* SFChoiceView.swift */,
+				23D11B9D2918C2BE00053454 /* FloatingButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -305,10 +334,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */,
-				23E4A3C629078DDB006E4F5B /* MapView.swift in Sources */,
+				238915B62918A20F00F58A7B /* MainView.swift in Sources */,
+				23D11B9C2918BDC200053454 /* BasicMapView.swift in Sources */,
+				23E4A3C629078DDB006E4F5B /* AdvMapView.swift in Sources */,
 				23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */,
 				235190CE29138BBA00B62ABE /* MapViewModel.swift in Sources */,
 				23813B5828F655CE00374F01 /* ContentView.swift in Sources */,
+				23D11B9E2918C2BE00053454 /* FloatingButton.swift in Sources */,
+				23D11BA02918C66000053454 /* ListView.swift in Sources */,
+				23D11BA22918C9C100053454 /* SettingsView.swift in Sources */,
 				23813B5628F655CE00374F01 /* ParkingLionsApp.swift in Sources */,
 				23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */,
 			);
@@ -471,6 +505,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ParkingLions/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkingLions/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to know when you are in an on-campus parking area.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -500,6 +535,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ParkingLions/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkingLions/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to know when you are in an on-campus parking area.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

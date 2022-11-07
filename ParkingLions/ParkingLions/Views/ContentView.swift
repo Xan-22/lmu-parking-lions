@@ -23,7 +23,7 @@ struct ContentView: View {
     @State var setupComplete = false
     
     var body: some View {
-        MapView()
+        MainView()
     }
 }
 
