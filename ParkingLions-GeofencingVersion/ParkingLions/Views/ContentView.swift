@@ -22,23 +22,24 @@ struct ContentView: View {
     @State var residenceHall = ResidenceHall.Faculty
     @State var isStudent = false
     @State var setupComplete = false
-    
+
     var body: some View {
         if setupComplete == false {
             HStack{
                 Text("User at destination: \(settings.showAlert ? "Yes" : "No")")
             }
             HStack{
-                SetupView(isStudent: isStudent, complete: setupComplete)
+                MainView()
             }
         } else {
-                MapView()
+            MainView()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
+
