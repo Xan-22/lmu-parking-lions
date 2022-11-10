@@ -27,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0309B65E291CA52700919A2C /* LMU.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LMU.gpx; path = "ParkingLions/GeoFencing/Simulate GPS/LMU.gpx"; sourceTree = "<group>"; };
+		0309B65F291CA5F200919A2C /* ParkingHealth.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ParkingHealth.gpx; path = "ParkingLions/GeoFencing/Simulate GPS/ParkingHealth.gpx"; sourceTree = "<group>"; };
 		037B9F8329048108003F1DFF /* LMU-ParkingA.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "LMU-ParkingA.gpx"; sourceTree = "<group>"; };
 		03A9434A291C449C0088B7BB /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		03A9434C291C44D80088B7BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,8 @@
 		5EF46B0E273ECB320093EDC8 = {
 			isa = PBXGroup;
 			children = (
+				0309B65F291CA5F200919A2C /* ParkingHealth.gpx */,
+				0309B65E291CA52700919A2C /* LMU.gpx */,
 				03E507ED29137A980006299B /* ParkingLions */,
 				5EF46B20273ECB330093EDC8 /* Assets.xcassets */,
 				5EF46B23273ECB330093EDC8 /* Preview Assets.xcassets */,

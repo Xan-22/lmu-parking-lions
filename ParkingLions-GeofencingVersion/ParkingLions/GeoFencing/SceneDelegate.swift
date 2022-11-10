@@ -13,6 +13,9 @@ class AlertSettings: ObservableObject {
     @Published var showAlert = false
 }
 
+
+public var counter:Bool = false
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -24,11 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
 
-    
-//         Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView:  contentView.environmentObject(settings))
@@ -44,13 +44,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let parkingUhall = CLLocationCoordinate2D(latitude: 33.96692986091734, longitude: -118.42249616595379)
         monitorRegionAtLocation(center: parkingUhall, identifier: "Parking U Hall")
         let parkingL = CLLocationCoordinate2D(latitude: 33.96879831488729, longitude: -118.41940527593725)
-        monitorRegionAtLocation(center: parkingUhall, identifier: "Parking L")
-        let parkingHealth = CLLocationCoordinate2D(latitude: 3.96927435740086, longitude: -118.41552078723907)
-        monitorRegionAtLocation(center: parkingUhall, identifier: "Parking Health")
+        monitorRegionAtLocation(center: parkingL, identifier: "Parking L")
+        let parkingHealth = CLLocationCoordinate2D(latitude: 33.96927435740086, longitude: -118.41552078723907)
+        monitorRegionAtLocation(center: parkingHealth, identifier: "Parking Health")
         let parkingE_F = CLLocationCoordinate2D(latitude: 33.969777123382656, longitude: -118.41396749774904)
-        monitorRegionAtLocation(center: parkingUhall, identifier: "Parking E-F")
+        monitorRegionAtLocation(center: parkingE_F, identifier: "Parking E-F")
         let parkingH = CLLocationCoordinate2D(latitude: 33.97279782280091, longitude: -118.41415822505951)
-        monitorRegionAtLocation(center: parkingUhall, identifier: "Parking H")
+        monitorRegionAtLocation(center: parkingH, identifier: "Parking H")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -85,18 +85,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Make sure the devices supports region monitoring.
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
-           
-            let maxDistance = locationManager.maximumRegionMonitoringDistance
-            // For the sake of this tutorial we will use the maxmimum allowed distance.
-            // When you are going production, it is recommended to optimize this value according to your needs to be less resource intensive
-            
-            // Register the region.
+
             let region = CLCircularRegion(center: center,
                                           radius: 100.0, identifier: identifier)
             region.notifyOnEntry = true
             region.notifyOnExit = true
-       
+
             locationManager.startMonitoring(for: region)
+            
         }
     }
 
@@ -106,15 +102,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        
-        settings.showAlert = true
 
+        settings.showAlert = true
+        
         if UIApplication.shared.applicationState == .active {
             
         } else {
             
-          let body = "You arrived at " + region.identifier
+          let body = "How Busy is the " + region.identifier + "?"
           let notificationContent = UNMutableNotificationContent()
+            counter = true
+            print("Counter: \(counter)")
           notificationContent.body = body
           notificationContent.sound = .default
           notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
@@ -142,6 +140,8 @@ extension SceneDelegate : CLLocationManagerDelegate {
             
           let body = "You left " + region.identifier
           let notificationContent = UNMutableNotificationContent()
+            counter = false
+            print("Counter: \(counter)")
           notificationContent.body = body
           notificationContent.sound = .default
           notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber

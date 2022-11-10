@@ -1,8 +1,8 @@
 //
-//  AppDelegate.swift
-//  RegoinMonitor
+//  SceneDelegate.swift
+//  ParkingLions
 //
-//  Created by Sachinthana Aluvihare on 11/12/21.
+//  Created by Erik Navarro on 11/2/22.
 //
 
 import SwiftUI

@@ -1,11 +1,9 @@
 //
-//  ContentView.swift
-//  RegoinMonitor
+//  SceneDelegate.swift
+//  ParkingLions
 //
-//  Created by Sachinthana Aluvihare on 11/12/21.
+//  Created by Erik Navarro on 11/2/22.
 //
-
-
 
 import SwiftUI
 import MapKit
@@ -16,9 +14,6 @@ struct MapView: View {
     @StateObject private var viewModel = MapViewModel()
     @EnvironmentObject var settings: AlertSettings
     var body: some View {
-        HStack{
-            Text("User at destination: \(settings.showAlert ? "Yes" : "No")")
-        }
         HStack{
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
                 .ignoresSafeArea()
