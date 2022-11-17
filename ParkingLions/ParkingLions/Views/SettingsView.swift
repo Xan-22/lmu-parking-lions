@@ -23,8 +23,7 @@ struct SettingsView: View {
                         
                         Picker("Map Type", selection: $mapType) {
                             Text("Standard").tag(0)
-                            Text("Hybrid").tag(1)
-                            Text("Image").tag(2)
+                            Text("Satellite").tag(1)
                         }.pickerStyle(MenuPickerStyle())
                             .onChange(of: mapType) { newValue in
                                 mapSettings.mapType = newValue
@@ -44,13 +43,14 @@ struct SettingsView: View {
 
                         Divider()
                         
-                        Picker("Map Elevation", selection: $showEmphasis) {
+                        Picker("Map Emphasis", selection: $showEmphasis) {
                             Text("Default").tag(0)
                             Text("Muted").tag(1)
                         }.pickerStyle(MenuPickerStyle())
                             .onChange(of: showEmphasis) { newValue in
                                 mapSettings.showEmphasis = newValue
                             }.padding([.leading, .trailing], 16)
+                            .disabled(mapSettings.mapType == 1)
                             //.disabled(basicMap)
                         
 //                        Divider()

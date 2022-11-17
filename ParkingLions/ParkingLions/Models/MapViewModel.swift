@@ -9,18 +9,6 @@ import Foundation
 import CoreLocation
 import MapKit
 
-final class MapSettings: ObservableObject {
-    @Published var mapType = 0
-    @Published var showElevation = 0
-    @Published var showEmphasis = 0
-    @Published var basicMap = false
-}
-
-enum MapDetails {
-    static let startingLocation = CLLocationCoordinate2D(latitude: 33.9700, longitude: -118.4179)
-    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-}
-
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager?
@@ -64,28 +52,15 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     }
 }
 
-// Extension from https://stackoverflow.com/a/66052227
-extension MKMapView {
-    func removeAnnotationAndOverlay(annotation: MKAnnotation) {
-        removeAnnotation(annotation)
-        if overlays.count > 0 {
-            if let overlay = overlays.first {
-                removeOverlay(overlay)
-            }
-        }
-    }
-        
-    func removeAllOverlays() {
-        removeOverlays(overlays)
-    }
-        
-        
-    func removeAllAnnotations() {
-        removeAnnotations(annotations)
-    }
-    
-    func removeAllAnnotationsAndOverlays() {
-        removeAllOverlays()
-        removeAllAnnotations()
-    }
+final class MapSettings: ObservableObject {
+    @Published var mapType = 0
+    @Published var showElevation = 0
+    @Published var showEmphasis = 0
+    @Published var basicMap = false
+}
+
+enum MapDetails {
+    static let startingLocation = CLLocationCoordinate2D(latitude: 33.9700, longitude: -118.4179)
+    static let logoPosition = CLLocationCoordinate2D(latitude: 33.97111143617523, longitude: -118.41663563062356)
+    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
 }
