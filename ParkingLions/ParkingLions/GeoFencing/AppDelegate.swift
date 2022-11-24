@@ -4,6 +4,7 @@
 //
 //  Created by Erik Navarro on 11/2/22.
 //
+//  Help from: https://betterprogramming.pub/ios-region-monitoring-with-swiftui-b1028fa8b95f
 
 import SwiftUI
 
