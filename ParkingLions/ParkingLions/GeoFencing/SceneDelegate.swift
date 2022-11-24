@@ -14,7 +14,7 @@ class AlertSettings: ObservableObject {
 }
 
 
-public var counter:Bool = false
+public var counter: Bool = false
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

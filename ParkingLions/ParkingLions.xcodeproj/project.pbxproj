@@ -69,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				5EF46B1C273ECB320093EDC8 /* SceneDelegate.swift */,
-				5EF46B1A273ECB320093EDC8 /* AppDelegate.swift */,
 				03A7CFD229137E2C007D4ED2 /* Simulate GPS */,
 			);
 			path = GeoFencing;
@@ -120,6 +119,7 @@
 		03E507ED29137A980006299B /* ParkingLions */ = {
 			isa = PBXGroup;
 			children = (
+				5EF46B1A273ECB320093EDC8 /* AppDelegate.swift */,
 				03A94349291C44810088B7BB /* Models */,
 				03A7CFD129137E05007D4ED2 /* GeoFencing */,
 				03E507E429136B900006299B /* Views */,

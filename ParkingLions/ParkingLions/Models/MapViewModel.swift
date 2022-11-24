@@ -28,6 +28,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     
     func startLocationService() {
         if CLLocationManager.locationServicesEnabled() {
+            // TODO: fix this warning here ^
             locationManager = CLLocationManager()
             locationManager!.delegate = self // TODO: Remove this force unwrap if possible
             locationManager?.desiredAccuracy = kCLLocationAccuracyBest

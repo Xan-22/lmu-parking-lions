@@ -18,7 +18,6 @@ struct SettingsView: View {
         NavigationView {
             Form {
                 Section(header: Text("Map Settings")) {
-                    // AdvMapView Settings
                     VStack(alignment: .leading) {
                         
                         Picker("Map Type", selection: $mapType) {
@@ -52,14 +51,6 @@ struct SettingsView: View {
                                 mapSettings.showEmphasis = newValue
                             }.padding([.leading, .trailing], 16)
                             //.disabled(basicMap)
-                        
-//                        Divider()
-//
-//                        Toggle(isOn: $basicMap, label: {
-//                            Text("Legacy Map")
-//                        }).onChange(of: basicMap) { newValue in
-//                            mapSettings.basicMap = newValue
-//                        }.padding([.leading, .trailing], 16)
                     }
                 }
             }

@@ -25,7 +25,7 @@ struct ContentView: View {
     @State var setupComplete = false
 
     var body: some View {
-        if setupComplete == false {
+        VStack {
             HStack{
                 if (settings.showAlert){
                     Text("Counter: \(settings.showAlert ? "True" : "False")")
@@ -33,10 +33,6 @@ struct ContentView: View {
 //                Text("Counter: \(settings.showAlert ? counter = true : counter = false)")
                 Text("User at destination: \(settings.showAlert ? "Yes" : "No")")
             }
-            HStack{
-                MainView()
-            }
-        } else {
             MainView()
         }
     }
