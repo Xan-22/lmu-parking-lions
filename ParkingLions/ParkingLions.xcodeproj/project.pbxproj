@@ -12,19 +12,20 @@
 		23813B5828F655CE00374F01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B5728F655CE00374F01 /* ContentView.swift */; };
 		23813B5A28F655D200374F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23813B5928F655D200374F01 /* Assets.xcassets */; };
 		23813B5D28F655D200374F01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23813B5C28F655D200374F01 /* Preview Assets.xcassets */; };
-		23813B6728F655D200374F01 /* ParkingLionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B6628F655D200374F01 /* ParkingLionsTests.swift */; };
-		23813B7128F655D200374F01 /* ParkingLionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B7028F655D200374F01 /* ParkingLionsUITests.swift */; };
-		23813B7328F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */; };
 		238915B22918A07500F58A7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238915B12918A07500F58A7B /* MapKit.framework */; };
 		238915B62918A20F00F58A7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238915B52918A20F00F58A7B /* MainView.swift */; };
 		23D11B9C2918BDC200053454 /* BasicMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9B2918BDC200053454 /* BasicMapView.swift */; };
 		23D11B9E2918C2BE00053454 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9D2918C2BE00053454 /* FloatingButton.swift */; };
 		23D11BA02918C66000053454 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9F2918C66000053454 /* ListView.swift */; };
 		23D11BA22918C9C100053454 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11BA12918C9C100053454 /* SettingsView.swift */; };
-		23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3BE29078560006E4F5B /* SetupView.swift */; };
+		23D40043292F526F0013DB8B /* AdvMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40042292F526F0013DB8B /* AdvMapView.swift */; };
+		23D4005C292F5A890013DB8B /* ParkingHealth.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 23D40056292F5A890013DB8B /* ParkingHealth.gpx */; };
+		23D4005D292F5A890013DB8B /* LMU-ParkingA.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 23D40057292F5A890013DB8B /* LMU-ParkingA.gpx */; };
+		23D4005E292F5A890013DB8B /* ParkingUHall.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 23D40058292F5A890013DB8B /* ParkingUHall.gpx */; };
+		23D4005F292F5A890013DB8B /* LMU.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 23D40059292F5A890013DB8B /* LMU.gpx */; };
+		23D40060292F5A890013DB8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4005A292F5A890013DB8B /* AppDelegate.swift */; };
+		23D40061292F5A890013DB8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4005B292F5A890013DB8B /* SceneDelegate.swift */; };
 		23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C02907859B006E4F5B /* LogoView.swift */; };
-		23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C229078854006E4F5B /* SFChoiceView.swift */; };
-		23E4A3C629078DDB006E4F5B /* AdvMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C529078DDB006E4F5B /* AdvMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +53,7 @@
 		23813B5928F655D200374F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23813B5C28F655D200374F01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23813B6228F655D200374F01 /* ParkingLionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingLionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23813B6628F655D200374F01 /* ParkingLionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsTests.swift; sourceTree = "<group>"; };
 		23813B6C28F655D200374F01 /* ParkingLionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingLionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23813B7028F655D200374F01 /* ParkingLionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsUITests.swift; sourceTree = "<group>"; };
-		23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		238915AF2918A07500F58A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		238915B12918A07500F58A7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		238915B52918A20F00F58A7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -63,10 +61,14 @@
 		23D11B9D2918C2BE00053454 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		23D11B9F2918C66000053454 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		23D11BA12918C9C100053454 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		23E4A3BE29078560006E4F5B /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		23D40042292F526F0013DB8B /* AdvMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvMapView.swift; sourceTree = "<group>"; };
+		23D40056292F5A890013DB8B /* ParkingHealth.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ParkingHealth.gpx; sourceTree = "<group>"; };
+		23D40057292F5A890013DB8B /* LMU-ParkingA.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "LMU-ParkingA.gpx"; sourceTree = "<group>"; };
+		23D40058292F5A890013DB8B /* ParkingUHall.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ParkingUHall.gpx; sourceTree = "<group>"; };
+		23D40059292F5A890013DB8B /* LMU.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LMU.gpx; sourceTree = "<group>"; };
+		23D4005A292F5A890013DB8B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23D4005B292F5A890013DB8B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		23E4A3C02907859B006E4F5B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		23E4A3C229078854006E4F5B /* SFChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFChoiceView.swift; sourceTree = "<group>"; };
-		23E4A3C529078DDB006E4F5B /* AdvMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				23813B5428F655CE00374F01 /* ParkingLions */,
-				23813B6528F655D200374F01 /* ParkingLionsTests */,
-				23813B6F28F655D200374F01 /* ParkingLionsUITests */,
 				23813B5328F655CE00374F01 /* Products */,
 				238915B02918A07500F58A7B /* Frameworks */,
 			);
@@ -122,6 +122,7 @@
 				238915AF2918A07500F58A7B /* Info.plist */,
 				23813B5528F655CE00374F01 /* ParkingLionsApp.swift */,
 				23813B5928F655D200374F01 /* Assets.xcassets */,
+				23D40054292F5A890013DB8B /* GeoFencing */,
 				23E4A3B929077F9F006E4F5B /* Firebase Service */,
 				23E4A3B829077F95006E4F5B /* Models */,
 				23E4A3B729077F68006E4F5B /* Views */,
@@ -138,29 +139,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		23813B6528F655D200374F01 /* ParkingLionsTests */ = {
-			isa = PBXGroup;
-			children = (
-				23813B6628F655D200374F01 /* ParkingLionsTests.swift */,
-			);
-			path = ParkingLionsTests;
-			sourceTree = "<group>";
-		};
-		23813B6F28F655D200374F01 /* ParkingLionsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				23813B7028F655D200374F01 /* ParkingLionsUITests.swift */,
-				23813B7228F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift */,
-			);
-			path = ParkingLionsUITests;
-			sourceTree = "<group>";
-		};
 		238915B02918A07500F58A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				238915B12918A07500F58A7B /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23D40054292F5A890013DB8B /* GeoFencing */ = {
+			isa = PBXGroup;
+			children = (
+				23D40055292F5A890013DB8B /* Simulate GPS */,
+				23D4005A292F5A890013DB8B /* AppDelegate.swift */,
+				23D4005B292F5A890013DB8B /* SceneDelegate.swift */,
+			);
+			path = GeoFencing;
+			sourceTree = "<group>";
+		};
+		23D40055292F5A890013DB8B /* Simulate GPS */ = {
+			isa = PBXGroup;
+			children = (
+				23D40056292F5A890013DB8B /* ParkingHealth.gpx */,
+				23D40057292F5A890013DB8B /* LMU-ParkingA.gpx */,
+				23D40058292F5A890013DB8B /* ParkingUHall.gpx */,
+				23D40059292F5A890013DB8B /* LMU.gpx */,
+			);
+			path = "Simulate GPS";
 			sourceTree = "<group>";
 		};
 		23E4A3B729077F68006E4F5B /* Views */ = {
@@ -170,7 +175,6 @@
 				238915B52918A20F00F58A7B /* MainView.swift */,
 				23D11B9F2918C66000053454 /* ListView.swift */,
 				23D11BA12918C9C100053454 /* SettingsView.swift */,
-				23E4A3BE29078560006E4F5B /* SetupView.swift */,
 				23E4A3C42907886D006E4F5B /* Helpers */,
 			);
 			path = Views;
@@ -194,10 +198,9 @@
 		23E4A3C42907886D006E4F5B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				23E4A3C529078DDB006E4F5B /* AdvMapView.swift */,
+				23D40042292F526F0013DB8B /* AdvMapView.swift */,
 				23D11B9B2918BDC200053454 /* BasicMapView.swift */,
 				23E4A3C02907859B006E4F5B /* LogoView.swift */,
-				23E4A3C229078854006E4F5B /* SFChoiceView.swift */,
 				23D11B9D2918C2BE00053454 /* FloatingButton.swift */,
 			);
 			path = Helpers;
@@ -307,8 +310,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D4005F292F5A890013DB8B /* LMU.gpx in Resources */,
 				23813B5D28F655D200374F01 /* Preview Assets.xcassets in Resources */,
+				23D4005D292F5A890013DB8B /* LMU-ParkingA.gpx in Resources */,
+				23D4005C292F5A890013DB8B /* ParkingHealth.gpx in Resources */,
 				23813B5A28F655D200374F01 /* Assets.xcassets in Resources */,
+				23D4005E292F5A890013DB8B /* ParkingUHall.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,18 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E4A3BF29078560006E4F5B /* SetupView.swift in Sources */,
+				23D40060292F5A890013DB8B /* AppDelegate.swift in Sources */,
 				238915B62918A20F00F58A7B /* MainView.swift in Sources */,
 				23D11B9C2918BDC200053454 /* BasicMapView.swift in Sources */,
-				23E4A3C629078DDB006E4F5B /* AdvMapView.swift in Sources */,
 				23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */,
 				235190CE29138BBA00B62ABE /* MapViewModel.swift in Sources */,
 				23813B5828F655CE00374F01 /* ContentView.swift in Sources */,
 				23D11B9E2918C2BE00053454 /* FloatingButton.swift in Sources */,
 				23D11BA02918C66000053454 /* ListView.swift in Sources */,
+				23D40061292F5A890013DB8B /* SceneDelegate.swift in Sources */,
 				23D11BA22918C9C100053454 /* SettingsView.swift in Sources */,
 				23813B5628F655CE00374F01 /* ParkingLionsApp.swift in Sources */,
-				23E4A3C329078854006E4F5B /* SFChoiceView.swift in Sources */,
+				23D40043292F526F0013DB8B /* AdvMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23813B6728F655D200374F01 /* ParkingLionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +366,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23813B7128F655D200374F01 /* ParkingLionsUITests.swift in Sources */,
-				23813B7328F655D300374F01 /* ParkingLionsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -485,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -506,12 +510,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParkingLions/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to know when you are in an on-campus parking area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to location when in use?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,12 +541,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParkingLions/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to know when you are in an on-campus parking area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access to location when in use?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
