@@ -11,7 +11,6 @@
 		23813B5628F655CE00374F01 /* ParkingLionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B5528F655CE00374F01 /* ParkingLionsApp.swift */; };
 		23813B5828F655CE00374F01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23813B5728F655CE00374F01 /* ContentView.swift */; };
 		23813B5A28F655D200374F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23813B5928F655D200374F01 /* Assets.xcassets */; };
-		23813B5D28F655D200374F01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23813B5C28F655D200374F01 /* Preview Assets.xcassets */; };
 		238915B22918A07500F58A7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238915B12918A07500F58A7B /* MapKit.framework */; };
 		238915B62918A20F00F58A7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238915B52918A20F00F58A7B /* MainView.swift */; };
 		23D11B9C2918BDC200053454 /* BasicMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D11B9B2918BDC200053454 /* BasicMapView.swift */; };
@@ -28,32 +27,12 @@
 		23E4A3C12907859B006E4F5B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4A3C02907859B006E4F5B /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		23813B6328F655D200374F01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23813B4A28F655CE00374F01 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23813B5128F655CE00374F01;
-			remoteInfo = ParkingLions;
-		};
-		23813B6D28F655D200374F01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23813B4A28F655CE00374F01 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23813B5128F655CE00374F01;
-			remoteInfo = ParkingLions;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		235190CD29138BBA00B62ABE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		23813B5228F655CE00374F01 /* ParkingLions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingLions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23813B5528F655CE00374F01 /* ParkingLionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsApp.swift; sourceTree = "<group>"; };
 		23813B5728F655CE00374F01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23813B5928F655D200374F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23813B5C28F655D200374F01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		23813B6228F655D200374F01 /* ParkingLionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingLionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23813B6C28F655D200374F01 /* ParkingLionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingLionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		238915AF2918A07500F58A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		238915B12918A07500F58A7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		238915B52918A20F00F58A7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -80,20 +59,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23813B5F28F655D200374F01 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23813B6928F655D200374F01 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				23813B5228F655CE00374F01 /* ParkingLions.app */,
-				23813B6228F655D200374F01 /* ParkingLionsTests.xctest */,
-				23813B6C28F655D200374F01 /* ParkingLionsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,17 +89,8 @@
 				23E4A3B929077F9F006E4F5B /* Firebase Service */,
 				23E4A3B829077F95006E4F5B /* Models */,
 				23E4A3B729077F68006E4F5B /* Views */,
-				23813B5B28F655D200374F01 /* Preview Content */,
 			);
 			path = ParkingLions;
-			sourceTree = "<group>";
-		};
-		23813B5B28F655D200374F01 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				23813B5C28F655D200374F01 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		238915B02918A07500F58A7B /* Frameworks */ = {
@@ -226,42 +180,6 @@
 			productReference = 23813B5228F655CE00374F01 /* ParkingLions.app */;
 			productType = "com.apple.product-type.application";
 		};
-		23813B6128F655D200374F01 /* ParkingLionsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23813B7928F655D300374F01 /* Build configuration list for PBXNativeTarget "ParkingLionsTests" */;
-			buildPhases = (
-				23813B5E28F655D200374F01 /* Sources */,
-				23813B5F28F655D200374F01 /* Frameworks */,
-				23813B6028F655D200374F01 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				23813B6428F655D200374F01 /* PBXTargetDependency */,
-			);
-			name = ParkingLionsTests;
-			productName = ParkingLionsTests;
-			productReference = 23813B6228F655D200374F01 /* ParkingLionsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		23813B6B28F655D200374F01 /* ParkingLionsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23813B7C28F655D300374F01 /* Build configuration list for PBXNativeTarget "ParkingLionsUITests" */;
-			buildPhases = (
-				23813B6828F655D200374F01 /* Sources */,
-				23813B6928F655D200374F01 /* Frameworks */,
-				23813B6A28F655D200374F01 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				23813B6E28F655D200374F01 /* PBXTargetDependency */,
-			);
-			name = ParkingLionsUITests;
-			productName = ParkingLionsUITests;
-			productReference = 23813B6C28F655D200374F01 /* ParkingLionsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,14 +192,6 @@
 				TargetAttributes = {
 					23813B5128F655CE00374F01 = {
 						CreatedOnToolsVersion = 13.3.1;
-					};
-					23813B6128F655D200374F01 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 23813B5128F655CE00374F01;
-					};
-					23813B6B28F655D200374F01 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 23813B5128F655CE00374F01;
 					};
 				};
 			};
@@ -299,8 +209,6 @@
 			projectRoot = "";
 			targets = (
 				23813B5128F655CE00374F01 /* ParkingLions */,
-				23813B6128F655D200374F01 /* ParkingLionsTests */,
-				23813B6B28F655D200374F01 /* ParkingLionsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -311,25 +219,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D4005F292F5A890013DB8B /* LMU.gpx in Resources */,
-				23813B5D28F655D200374F01 /* Preview Assets.xcassets in Resources */,
 				23D4005D292F5A890013DB8B /* LMU-ParkingA.gpx in Resources */,
 				23D4005C292F5A890013DB8B /* ParkingHealth.gpx in Resources */,
 				23813B5A28F655D200374F01 /* Assets.xcassets in Resources */,
 				23D4005E292F5A890013DB8B /* ParkingUHall.gpx in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23813B6028F655D200374F01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23813B6A28F655D200374F01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,34 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23813B5E28F655D200374F01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23813B6828F655D200374F01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		23813B6428F655D200374F01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23813B5128F655CE00374F01 /* ParkingLions */;
-			targetProxy = 23813B6328F655D200374F01 /* PBXContainerItemProxy */;
-		};
-		23813B6E28F655D200374F01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23813B5128F655CE00374F01 /* ParkingLions */;
-			targetProxy = 23813B6D28F655D200374F01 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		23813B7428F655D300374F01 /* Debug */ = {
@@ -561,78 +427,6 @@
 			};
 			name = Release;
 		};
-		23813B7A28F655D300374F01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Xan.ParkingLionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkingLions.app/ParkingLions";
-			};
-			name = Debug;
-		};
-		23813B7B28F655D300374F01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Xan.ParkingLionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkingLions.app/ParkingLions";
-			};
-			name = Release;
-		};
-		23813B7D28F655D300374F01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Xan.ParkingLionsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ParkingLions;
-			};
-			name = Debug;
-		};
-		23813B7E28F655D300374F01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Xan.ParkingLionsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ParkingLions;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,24 +444,6 @@
 			buildConfigurations = (
 				23813B7728F655D300374F01 /* Debug */,
 				23813B7828F655D300374F01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		23813B7928F655D300374F01 /* Build configuration list for PBXNativeTarget "ParkingLionsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23813B7A28F655D300374F01 /* Debug */,
-				23813B7B28F655D300374F01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		23813B7C28F655D300374F01 /* Build configuration list for PBXNativeTarget "ParkingLionsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23813B7D28F655D300374F01 /* Debug */,
-				23813B7E28F655D300374F01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
