@@ -19,6 +19,7 @@ final class MapSettings: ObservableObject {
 enum MapDetails {
     static let startingLocation = CLLocationCoordinate2D(latitude: 33.9700, longitude: -118.4179)
     static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    static let defaultRegion = MKCoordinateRegion(center: .init(latitude: 33.9700, longitude: -118.4179), span: .init(latitudeDelta: 0.05, longitudeDelta: 0.05))
 }
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
@@ -62,31 +63,5 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         func locationAuthChanged(_ manager: CLLocationManager) {
             checkLocationAuth()
         }
-    }
-}
-
-// Extension from https://stackoverflow.com/a/66052227
-extension MKMapView {
-    func removeAnnotationAndOverlay(annotation: MKAnnotation) {
-        removeAnnotation(annotation)
-        if overlays.count > 0 {
-            if let overlay = overlays.first {
-                removeOverlay(overlay)
-            }
-        }
-    }
-        
-    func removeAllOverlays() {
-        removeOverlays(overlays)
-    }
-        
-        
-    func removeAllAnnotations() {
-        removeAnnotations(annotations)
-    }
-    
-    func removeAllAnnotationsAndOverlays() {
-        removeAllOverlays()
-        removeAllAnnotations()
     }
 }
