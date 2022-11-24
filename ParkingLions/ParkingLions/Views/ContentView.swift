@@ -18,11 +18,9 @@ struct ContentView: View {
         case PalmNorth
         case Rosecrans
         case Whelan
-        case Faculty
+        case None
     }
-    @State var residenceHall = ResidenceHall.Faculty
-    @State var isStudent = false
-    @State var setupComplete = false
+    @State var residenceHall = ResidenceHall.None
 
     var body: some View {
         VStack {
