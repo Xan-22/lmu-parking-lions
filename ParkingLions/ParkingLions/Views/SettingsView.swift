@@ -12,6 +12,7 @@ struct SettingsView: View {
     @State var mapType = 0
     @State var showElevation = 0
     @State var showEmphasis = 0
+    //@State var basicMap = false
     
     var body: some View {
         NavigationView {
@@ -27,6 +28,7 @@ struct SettingsView: View {
                             .onChange(of: mapType) { newValue in
                                 mapSettings.mapType = newValue
                             }.padding([.top, .leading, .trailing], 16)
+                            //.disabled(basicMap)
                         
                         Divider()
                         
@@ -37,6 +39,7 @@ struct SettingsView: View {
                             .onChange(of: showElevation) { newValue in
                                 mapSettings.showElevation = newValue
                             }.padding([.leading, .trailing], 16)
+                            //.disabled(basicMap)
 
                         Divider()
                         
@@ -56,6 +59,7 @@ struct SettingsView: View {
                 mapType = mapSettings.mapType
                 showElevation = mapSettings.showElevation
                 showEmphasis = mapSettings.showEmphasis
+                //basicMap = mapSettings.basicMap
             }
     }
 }

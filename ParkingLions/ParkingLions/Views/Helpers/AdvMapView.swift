@@ -1,11 +1,10 @@
 //
-//  MapView.swift
+//  AdvMapView.swift
 //  ParkingLions
 //
 //  Created by Xan on 10/24/22.
 //
 // Help from https://holyswift.app/new-mapkit-configurations-with-swiftui/
-// and https://github.com/egesucu/WWDC22MapKit
 // TODO: Track Current Location
 // TODO: Highlight and annotate parking areas
 
@@ -14,7 +13,7 @@ import MapKit
 import Combine
 
 @available(iOS 16.0, *)
-struct MapView: UIViewRepresentable {
+struct AdvMapView: UIViewRepresentable {
     @StateObject private var mapModel = MapViewModel()
     private var counter = 0
     @EnvironmentObject private var mapSettings: MapSettings
@@ -27,13 +26,6 @@ struct MapView: UIViewRepresentable {
         mapView.preferredConfiguration = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
         mapView.showsUserLocation = true
         return mapView
-    }
-    
-    func configureMapArea(_ uiView: MKMapView){
-            let region = MKCoordinateRegion(center: .init(latitude: 39.925533, longitude: 32.866287), span: .init(latitudeDelta: 0.05, longitudeDelta: 0.05))
-            uiView.setRegion(region, animated: true)
-            uiView.isZoomEnabled = true
-            
     }
      
     func updateUIView(_ uiView: MKMapView, context: Context) {
@@ -75,7 +67,7 @@ struct MapView_Previews: PreviewProvider {
     static var mapSettings = MapSettings()
     static var previews: some View {
         if #available(iOS 16.0, *) {
-            MapView()
+            AdvMapView()
                 .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
         } else {
             Text("Error: Wrong iOS Version for Advanced Map.")
