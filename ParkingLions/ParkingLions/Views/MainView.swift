@@ -13,16 +13,10 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                if #available(iOS 16.0, *) {
-                    AdvMapView()
-                        .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
-                        .navigationBarTitle("Map")
-                        .toolbar(.hidden)
-                } else {
-                    BasicMapView()
-                        .navigationBarTitle("Map")
-                        .navigationBarHidden(true)
-                }
+                AdvMapView()
+                    .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
+                    .navigationBarTitle("Map")
+                    .toolbar(.hidden)
                 ZStack(alignment: .bottomTrailing) {
                     Rectangle()
                         .foregroundColor(.clear)

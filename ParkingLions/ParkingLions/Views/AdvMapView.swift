@@ -66,11 +66,7 @@ struct AdvMapView: UIViewRepresentable {
 struct MapView_Previews: PreviewProvider {
     static var mapSettings = MapSettings()
     static var previews: some View {
-        if #available(iOS 16.0, *) {
-            AdvMapView()
-                .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
-        } else {
-            Text("Error: Wrong iOS Version for Advanced Map.")
-        }
+    AdvMapView()
+        .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
     }
 }
