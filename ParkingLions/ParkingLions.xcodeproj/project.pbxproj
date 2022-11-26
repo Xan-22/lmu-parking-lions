@@ -12,10 +12,17 @@
 		03A9434F291C44F80088B7BB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9434E291C44F80088B7BB /* ListView.swift */; };
 		03A94351291C451C0088B7BB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A94350291C451C0088B7BB /* SettingsView.swift */; };
 		03A94353291C46930088B7BB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A94352291C46930088B7BB /* MapKit.framework */; };
-		03A94355291C47150088B7BB /* AdvMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A94354291C47150088B7BB /* AdvMapView.swift */; };
+		03A94355291C47150088B7BB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A94354291C47150088B7BB /* MapView.swift */; };
 		03A94359291C475E0088B7BB /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A94358291C475E0088B7BB /* FloatingButton.swift */; };
 		03E507DD29136B160006299B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E507DC29136B160006299B /* ContentView.swift */; };
 		03E507E129136B620006299B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E507E029136B620006299B /* LogoView.swift */; };
+		23D40075292F866B0013DB8B /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40074292F866B0013DB8B /* ListRow.swift */; };
+		23D40079292F87F60013DB8B /* ParkingAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40078292F87F60013DB8B /* ParkingAreaModel.swift */; };
+		23D4007B293191A30013DB8B /* firebaseData.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D4007A293191A30013DB8B /* firebaseData.json */; };
+		23D4007E293196360013DB8B /* parkingAreaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D4007D293196360013DB8B /* parkingAreaData.json */; };
+		23D40080293199200013DB8B /* AreaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4007F293199200013DB8B /* AreaDetail.swift */; };
+		23D4008329319DAD0013DB8B /* MapOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4008229319DAD0013DB8B /* MapOverlays.swift */; };
+		23D4008529319FE90013DB8B /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4008429319FE90013DB8B /* MapViewCoordinator.swift */; };
 		5EF46B1B273ECB320093EDC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF46B1A273ECB320093EDC8 /* AppDelegate.swift */; };
 		5EF46B1D273ECB320093EDC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF46B1C273ECB320093EDC8 /* SceneDelegate.swift */; };
 		5EF46B21273ECB330093EDC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF46B20273ECB330093EDC8 /* Assets.xcassets */; };
@@ -31,11 +38,18 @@
 		03A9434E291C44F80088B7BB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		03A94350291C451C0088B7BB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		03A94352291C46930088B7BB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		03A94354291C47150088B7BB /* AdvMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvMapView.swift; sourceTree = "<group>"; };
+		03A94354291C47150088B7BB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		03A94358291C475E0088B7BB /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		03E507DC29136B160006299B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03E507E029136B620006299B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		03E507E629136BF70006299B /* ParkingUHall.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ParkingUHall.gpx; sourceTree = "<group>"; };
+		23D40074292F866B0013DB8B /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		23D40078292F87F60013DB8B /* ParkingAreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAreaModel.swift; sourceTree = "<group>"; };
+		23D4007A293191A30013DB8B /* firebaseData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = firebaseData.json; sourceTree = "<group>"; };
+		23D4007D293196360013DB8B /* parkingAreaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parkingAreaData.json; sourceTree = "<group>"; };
+		23D4007F293199200013DB8B /* AreaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetail.swift; sourceTree = "<group>"; };
+		23D4008229319DAD0013DB8B /* MapOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlays.swift; sourceTree = "<group>"; };
+		23D4008429319FE90013DB8B /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		5EF46B17273ECB320093EDC8 /* ParkingLions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingLions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF46B1A273ECB320093EDC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF46B1C273ECB320093EDC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				03A9434A291C449C0088B7BB /* MapViewModel.swift */,
+				23D40078292F87F60013DB8B /* ParkingAreaModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,7 +113,8 @@
 				03A94350291C451C0088B7BB /* SettingsView.swift */,
 				03A9434E291C44F80088B7BB /* ListView.swift */,
 				03A9434C291C44D80088B7BB /* MainView.swift */,
-				03A94354291C47150088B7BB /* AdvMapView.swift */,
+				03A94354291C47150088B7BB /* MapView.swift */,
+				23D4008129319D980013DB8B /* Map */,
 				03E507E529136BA40006299B /* Helpers */,
 			);
 			path = Views;
@@ -109,6 +125,8 @@
 			children = (
 				03E507E029136B620006299B /* LogoView.swift */,
 				03A94358291C475E0088B7BB /* FloatingButton.swift */,
+				23D40074292F866B0013DB8B /* ListRow.swift */,
+				23D4007F293199200013DB8B /* AreaDetail.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -117,11 +135,30 @@
 			isa = PBXGroup;
 			children = (
 				5EF46B1A273ECB320093EDC8 /* AppDelegate.swift */,
-				03A94349291C44810088B7BB /* Models */,
-				03A7CFD129137E05007D4ED2 /* GeoFencing */,
 				03E507E429136B900006299B /* Views */,
+				03A94349291C44810088B7BB /* Models */,
+				23D40076292F87840013DB8B /* Resources */,
+				03A7CFD129137E05007D4ED2 /* GeoFencing */,
 			);
 			path = ParkingLions;
+			sourceTree = "<group>";
+		};
+		23D40076292F87840013DB8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23D4007D293196360013DB8B /* parkingAreaData.json */,
+				23D4007A293191A30013DB8B /* firebaseData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23D4008129319D980013DB8B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				23D4008229319DAD0013DB8B /* MapOverlays.swift */,
+				23D4008429319FE90013DB8B /* MapViewCoordinator.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		5EF46B0E273ECB320093EDC8 = {
@@ -201,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF46B24273ECB330093EDC8 /* Preview Assets.xcassets in Resources */,
+				23D4007B293191A30013DB8B /* firebaseData.json in Resources */,
 				5EF46B21273ECB330093EDC8 /* Assets.xcassets in Resources */,
+				23D4007E293196360013DB8B /* parkingAreaData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,12 +255,17 @@
 				03A9434D291C44D80088B7BB /* MainView.swift in Sources */,
 				03A9434F291C44F80088B7BB /* ListView.swift in Sources */,
 				03E507E129136B620006299B /* LogoView.swift in Sources */,
+				23D4008529319FE90013DB8B /* MapViewCoordinator.swift in Sources */,
 				03E507DD29136B160006299B /* ContentView.swift in Sources */,
 				03A94359291C475E0088B7BB /* FloatingButton.swift in Sources */,
 				5EF46B1D273ECB320093EDC8 /* SceneDelegate.swift in Sources */,
+				23D40080293199200013DB8B /* AreaDetail.swift in Sources */,
 				03A9434B291C449C0088B7BB /* MapViewModel.swift in Sources */,
+				23D4008329319DAD0013DB8B /* MapOverlays.swift in Sources */,
+				23D40075292F866B0013DB8B /* ListRow.swift in Sources */,
+				23D40079292F87F60013DB8B /* ParkingAreaModel.swift in Sources */,
 				03A94351291C451C0088B7BB /* SettingsView.swift in Sources */,
-				03A94355291C47150088B7BB /* AdvMapView.swift in Sources */,
+				03A94355291C47150088B7BB /* MapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

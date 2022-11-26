@@ -13,7 +13,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                AdvMapView()
+                MapView()
                     .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
                     .navigationBarTitle("Map")
                     .toolbar(.hidden)

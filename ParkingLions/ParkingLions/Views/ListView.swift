@@ -10,19 +10,25 @@ import SwiftUI
 struct ListView: View {
     @EnvironmentObject var mapSettings: MapSettings
     var body: some View {
-        List {
-            NavigationLink {
-                SettingsView().environmentObject(mapSettings)
-            } label: {
-                HStack {
-                    Image(systemName: "gear")
-                    Text("Settings")
+        VStack {
+            ZStack {
+                NavigationLink {
+                    SettingsView().environmentObject(mapSettings)
+                } label: {
+                    HStack {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+                }
+            }
+            List(parkingAreas, id: \.id) { area in
+                NavigationLink {
+                    AreaDetail(parkingArea: area)
+                } label: {
+                    ListRow(parkingArea: area)
                 }
             }
         }
-        //List {
-            // TODO: List all parking areas here
-        //}
     }
 }
 

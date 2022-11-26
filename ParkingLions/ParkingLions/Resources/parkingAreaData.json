@@ -1,0 +1,29 @@
+[
+    {
+        "id": 0,
+        "name": "Drollinger",
+        "busyness": 0.0,
+        "coordinates": {
+            "longitude": 33.96966257105774,
+            "latitude": -118.41911946371664
+        },
+        "boundaries": [
+            {
+                "longitude": 33.96968058992921,
+                "latitude": -118.41924405604357
+            },
+            {
+                "longitude": 33.96969934907464,
+                "latitude": -118.41873996318468
+            },
+            {
+                "longitude": 33.96855235370755,
+                "latitude": -118.41877550819301
+            },
+            {
+                "longitude": 33.96858183275388,
+                "latitude": -118.4205172136477
+            }
+        ]
+    }
+]

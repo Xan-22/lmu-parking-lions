@@ -1,22 +1,26 @@
 //
-//  AdvMapView.swift
+//  MapView.swift
 //  ParkingLions
 //
 //  Created by Xan on 10/24/22.
 //
 // Help from https://holyswift.app/new-mapkit-configurations-with-swiftui/
-// TODO: Track Current Location
-// TODO: Highlight and annotate parking areas
+// and https://www.appcoda.com/mapkit-polyline-polygon/
 
 import SwiftUI
 import MapKit
 import Combine
 
-@available(iOS 16.0, *)
-struct AdvMapView: UIViewRepresentable {
+struct MapView: UIViewRepresentable {
     @StateObject private var mapModel = MapViewModel()
-    private var counter = 0
     @EnvironmentObject private var mapSettings: MapSettings
+
+    private var counter = 0
+    let lmuLogo = LMUAnnotation()
+    
+    func makeCoordinator() -> MapViewCoordinator {
+         MapViewCoordinator(self)
+    }
 
     func makeUIView(context: Context) -> MKMapView {
         mapModel.startLocationService()
@@ -25,21 +29,41 @@ struct AdvMapView: UIViewRepresentable {
         mapView.region = mapModel.region
         mapView.preferredConfiguration = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
         mapView.showsUserLocation = true
+        
+        mapView.delegate = context.coordinator
+        mapView.addAnnotation(lmuLogo)
         return mapView
     }
      
     func updateUIView(_ uiView: MKMapView, context: Context) {
         updateMapType(uiView)
+        addOverlaysAndAnnotations(uiView)
+    }
+    
+    private func addOverlaysAndAnnotations(_ uiView: MKMapView) {
+        uiView.addAnnotation(lmuLogo)
+        var polygons: [MKPolygon] = []
+        for area in parkingAreas {
+            var locations = area.boundaryCoordinates
+            polygons.append(MKPolygon(coordinates: &locations, count: locations.count))
+        }
+        uiView.addOverlays(polygons)
     }
      
     private func updateMapType(_ uiView: MKMapView) {
         switch mapSettings.mapType {
         case 0:
             uiView.preferredConfiguration = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
+            let mapConfig = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
+                        mapConfig.pointOfInterestFilter = MKPointOfInterestFilter(including: [.parking])
+                        uiView.preferredConfiguration = mapConfig
+            uiView.preferredConfiguration = mapConfig
         case 1:
             uiView.preferredConfiguration = MKHybridMapConfiguration(elevationStyle: elevationStyle())
-        case 2:
-            uiView.preferredConfiguration = MKImageryMapConfiguration(elevationStyle: elevationStyle())
+            let mapConfig = MKHybridMapConfiguration(elevationStyle: elevationStyle())
+                        mapConfig.pointOfInterestFilter = MKPointOfInterestFilter(including: [.parking])
+                        uiView.preferredConfiguration = mapConfig
+            uiView.preferredConfiguration = mapConfig
         default:
             break
         }
@@ -66,7 +90,7 @@ struct AdvMapView: UIViewRepresentable {
 struct MapView_Previews: PreviewProvider {
     static var mapSettings = MapSettings()
     static var previews: some View {
-    AdvMapView()
+        MapView()
         .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
     }
 }
