@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct AreaDetail: View {
-    var parkingArea: ParkingArea
+    var name: String
+    var busyness: Double
     var body: some View {
         VStack {
-            Text(parkingArea.name).font(Font.title.bold())
+            Text(name).font(Font.title.bold())
         }
     }
 }
 
 struct AreaDetail_Previews: PreviewProvider {
-    static let previewArea = parkingAreas[0]
     static var previews: some View {
-        AreaDetail(parkingArea: previewArea)
+        AreaDetail(name: "Drollinger", busyness: 0.0)
     }
 }

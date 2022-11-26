@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ListRow: View {
-    var parkingArea: ParkingArea
+    var name: String
+    var busyness: Double
     var body: some View {
         HStack {
-            Text(parkingArea.name)
+            Text(name)
             Divider()
-            if parkingArea.busyness > 3.0 {
+            if busyness > 3.0 {
                 Text("Very Busy")
-            } else if parkingArea.busyness > 2.0 {
+            } else if busyness > 2.0 {
                 Text("Busy")
-            } else if parkingArea.busyness > 1.0 {
+            } else if busyness > 1.0 {
                 Text("OK")
             } else {
                 Text("Open")
@@ -27,8 +28,7 @@ struct ListRow: View {
 }
 
 struct ListRow_Previews: PreviewProvider {
-    static let previewArea = parkingAreas[0]
     static var previews: some View {
-        ListRow(parkingArea: previewArea)
+        ListRow(name: "Drollinger", busyness: 1.0)
     }
 }

@@ -19,6 +19,7 @@ final class MapSettings: ObservableObject {
 enum MapDetails {
     static let startingLocation = CLLocationCoordinate2D(latitude: 33.9700, longitude: -118.4179)
     static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    static let defaultRegion = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan)
     static let logoPosition = CLLocationCoordinate2D(latitude: 33.97111143617523, longitude: -118.41663563062356)
 }
 

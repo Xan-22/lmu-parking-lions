@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     @EnvironmentObject var mapSettings: MapSettings
+    @Binding var parkingAreaData: ParkingAreaData
     var body: some View {
         VStack {
             ZStack {
@@ -21,11 +22,11 @@ struct ListView: View {
                     }
                 }
             }
-            List(parkingAreas, id: \.id) { area in
+            List(parkingAreaData.parkingAreas, id: \.id) { area in
                 NavigationLink {
-                    AreaDetail(parkingArea: area)
+                    AreaDetail(name: area.name, busyness: area.busyness)
                 } label: {
-                    ListRow(parkingArea: area)
+                    ListRow(name: area.name, busyness: area.busyness)
                 }
             }
         }
@@ -34,7 +35,8 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     @ObservedObject static var mapSettings = MapSettings()
+    @State static var parkingAreaData = ParkingAreaData()
     static var previews: some View {
-        ListView().environmentObject(mapSettings)
+        ListView(parkingAreaData: $parkingAreaData).environmentObject(mapSettings)
     }
 }

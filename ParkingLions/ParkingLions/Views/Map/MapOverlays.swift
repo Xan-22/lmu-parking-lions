@@ -9,19 +9,16 @@ import SwiftUI
 import CoreLocation
 import MapKit
 
-class LMUAnnotation: NSObject, MKAnnotation {
-    // This property must be key-value observable, which the `@objc dynamic` attributes provide.
-    @objc dynamic var coordinate = MapDetails.logoPosition
-    
-    var title: String? = NSLocalizedString("LMU", comment: "LMU Annotation")
-    var subtitle: String? = NSLocalizedString("LMU", comment: "LMU Annotation")
-}
+enum MapOverlays {
+    static let drollinger =  MKPolygon(coordinates: [
+        
+        CLLocationCoordinate2D(latitude: 33.969747814141556, longitude: -118.41911572749991),
+        CLLocationCoordinate2D(latitude: 33.969747814141556, longitude: -118.41880395034723),
+        CLLocationCoordinate2D(latitude: 33.96840694911493, longitude: -118.41880395034723),
+        CLLocationCoordinate2D(latitude: 33.96840694911493, longitude: -118.42048557760448),
+        CLLocationCoordinate2D(latitude: 33.96862443243661, longitude: -118.42048557760448)
+    ], count: 5)
 
-class LMUAnnotationView: MKAnnotationView {
-    var body: some View {
-        Image("LMULogo")
-            .frame(width: 100, height: 100)
-    }
 }
 
 

@@ -12,42 +12,33 @@ import MapKit
 import Combine
 
 struct MapView: UIViewRepresentable {
-    @StateObject private var mapModel = MapViewModel()
-    @EnvironmentObject private var mapSettings: MapSettings
-
-    private var counter = 0
-    let lmuLogo = LMUAnnotation()
-    
-    func makeCoordinator() -> MapViewCoordinator {
-         MapViewCoordinator(self)
-    }
+    @EnvironmentObject var mapSettings: MapSettings
+    @Binding var parkingAreaData: ParkingAreaData
+    let mapViewController = MapViewController()
+    @State private var counter = 0
 
     func makeUIView(context: Context) -> MKMapView {
-        mapModel.startLocationService()
-        
         let mapView = MKMapView(frame: .zero)
-        mapView.region = mapModel.region
+        mapView.delegate = context.coordinator
+        mapView.region = MapDetails.defaultRegion
         mapView.preferredConfiguration = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
         mapView.showsUserLocation = true
-        
-        mapView.delegate = context.coordinator
-        mapView.addAnnotation(lmuLogo)
+        addMapOverlays(mapView)
         return mapView
+    }
+    
+    func addMapOverlays(_ mapView: MKMapView) {
+        mapView.addOverlay(MapOverlays.drollinger)
+    }
+    
+    func makeCoordinator() -> Coordinator {
+      Coordinator(self)
     }
      
     func updateUIView(_ uiView: MKMapView, context: Context) {
+        uiView.delegate = (mapViewController as MKMapViewDelegate)
+        uiView.showsUserLocation = true
         updateMapType(uiView)
-        addOverlaysAndAnnotations(uiView)
-    }
-    
-    private func addOverlaysAndAnnotations(_ uiView: MKMapView) {
-        uiView.addAnnotation(lmuLogo)
-        var polygons: [MKPolygon] = []
-        for area in parkingAreas {
-            var locations = area.boundaryCoordinates
-            polygons.append(MKPolygon(coordinates: &locations, count: locations.count))
-        }
-        uiView.addOverlays(polygons)
     }
      
     private func updateMapType(_ uiView: MKMapView) {
@@ -86,11 +77,20 @@ struct MapView: UIViewRepresentable {
     }
 }
 
+class Coordinator: NSObject, MKMapViewDelegate {
+  var parent: MapView
+
+  init(_ parent: MapView) {
+    self.parent = parent
+  }
+}
+
 
 struct MapView_Previews: PreviewProvider {
     static var mapSettings = MapSettings()
+    @State static var parkingAreaData = ParkingAreaData()
     static var previews: some View {
-        MapView()
+        MapView(parkingAreaData: $parkingAreaData)
         .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)
     }
 }
