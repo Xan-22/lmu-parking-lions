@@ -3,14 +3,15 @@
 //  ParkingLions
 //
 //  Created by Xan on 11/6/22.
-//
+//  Help from https://stackoverflow.com/a/59164100
 
 import SwiftUI
+import MapKit
 
 struct MainView: View {
     @ObservedObject var mapSettings = MapSettings()
-    @State var parkingAreaData = ParkingAreaData()
     @StateObject private var mapModel = MapViewModel()
+    @State var parkingAreaData = ParkingAreaData()
     
     var body: some View {
         NavigationView {

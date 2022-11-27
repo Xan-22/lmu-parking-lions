@@ -23,12 +23,13 @@ struct MapView: UIViewRepresentable {
         mapView.region = MapDetails.defaultRegion
         mapView.preferredConfiguration = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
         mapView.showsUserLocation = true
-        addMapOverlays(mapView)
+        addMapInfo(mapView)
         return mapView
     }
     
-    func addMapOverlays(_ mapView: MKMapView) {
-        mapView.addOverlay(MapOverlays.drollinger)
+    func addMapInfo(_ mapView: MKMapView) {
+        mapView.addOverlays(MapInfo.allOverlays)
+        mapView.addAnnotations(MapInfo.allAnnotations)
     }
     
     func makeCoordinator() -> Coordinator {
@@ -46,13 +47,13 @@ struct MapView: UIViewRepresentable {
         case 0:
             uiView.preferredConfiguration = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
             let mapConfig = MKStandardMapConfiguration(elevationStyle: elevationStyle(), emphasisStyle: emphasisStyle())
-                        mapConfig.pointOfInterestFilter = MKPointOfInterestFilter(including: [.parking])
+                        mapConfig.pointOfInterestFilter = MKPointOfInterestFilter(including: [])
                         uiView.preferredConfiguration = mapConfig
             uiView.preferredConfiguration = mapConfig
         case 1:
             uiView.preferredConfiguration = MKHybridMapConfiguration(elevationStyle: elevationStyle())
             let mapConfig = MKHybridMapConfiguration(elevationStyle: elevationStyle())
-                        mapConfig.pointOfInterestFilter = MKPointOfInterestFilter(including: [.parking])
+                        mapConfig.pointOfInterestFilter = MKPointOfInterestFilter(including: [])
                         uiView.preferredConfiguration = mapConfig
             uiView.preferredConfiguration = mapConfig
         default:
@@ -89,6 +90,7 @@ class Coordinator: NSObject, MKMapViewDelegate {
 struct MapView_Previews: PreviewProvider {
     static var mapSettings = MapSettings()
     @State static var parkingAreaData = ParkingAreaData()
+    @State static var isActive = false
     static var previews: some View {
         MapView(parkingAreaData: $parkingAreaData)
         .edgesIgnoringSafeArea(.all).environmentObject(mapSettings)

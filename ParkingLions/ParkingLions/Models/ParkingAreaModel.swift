@@ -19,6 +19,7 @@ enum AreaBusyness {
 struct ParkingArea: Hashable, Codable {
     var id: Int
     var name: String
+    var lot: String
     var busyness: Double
     
     private var coordinates: Coordinates
@@ -26,18 +27,6 @@ struct ParkingArea: Hashable, Codable {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
-    }
-    
-    private var boundaries: [Coordinates]
-    
-    var boundaryCoordinates: [CLLocationCoordinate2D] {
-        var coords: [CLLocationCoordinate2D] = []
-        for coordinate in boundaries {
-            coords.append(CLLocationCoordinate2D(
-                latitude: coordinate.latitude,
-                longitude: coordinate.longitude))
-        }
-        return coords
     }
 
     struct Coordinates: Hashable, Codable {
