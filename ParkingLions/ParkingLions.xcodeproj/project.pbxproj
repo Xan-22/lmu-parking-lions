@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,13 @@
 		03A94359291C475E0088B7BB /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A94358291C475E0088B7BB /* FloatingButton.swift */; };
 		03E507DD29136B160006299B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E507DC29136B160006299B /* ContentView.swift */; };
 		03E507E129136B620006299B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E507E029136B620006299B /* LogoView.swift */; };
+		237934582935DF5000099A15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237934572935DF5000099A15 /* GoogleService-Info.plist */; };
+		2379345B2935E29B00099A15 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2379345A2935E29B00099A15 /* FirebaseAnalytics */; };
+		2379345D2935E29B00099A15 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2379345C2935E29B00099A15 /* FirebaseAuth */; };
+		2379345F2935E29B00099A15 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2379345E2935E29B00099A15 /* FirebaseFirestore */; };
+		237934622935E61400099A15 /* ParkingLionsAreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237934612935E61400099A15 /* ParkingLionsAreaService.swift */; };
 		23D40075292F866B0013DB8B /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40074292F866B0013DB8B /* ListRow.swift */; };
 		23D40079292F87F60013DB8B /* ParkingAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40078292F87F60013DB8B /* ParkingAreaModel.swift */; };
-		23D4007B293191A30013DB8B /* firebaseData.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D4007A293191A30013DB8B /* firebaseData.json */; };
 		23D4007E293196360013DB8B /* parkingAreaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D4007D293196360013DB8B /* parkingAreaData.json */; };
 		23D40080293199200013DB8B /* AreaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4007F293199200013DB8B /* AreaDetail.swift */; };
 		23D4008329319DAD0013DB8B /* MapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D4008229319DAD0013DB8B /* MapInfo.swift */; };
@@ -43,9 +47,10 @@
 		03E507DC29136B160006299B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03E507E029136B620006299B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		03E507E629136BF70006299B /* ParkingUHall.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ParkingUHall.gpx; sourceTree = "<group>"; };
+		237934572935DF5000099A15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		237934612935E61400099A15 /* ParkingLionsAreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsAreaService.swift; sourceTree = "<group>"; };
 		23D40074292F866B0013DB8B /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		23D40078292F87F60013DB8B /* ParkingAreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAreaModel.swift; sourceTree = "<group>"; };
-		23D4007A293191A30013DB8B /* firebaseData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = firebaseData.json; sourceTree = "<group>"; };
 		23D4007D293196360013DB8B /* parkingAreaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parkingAreaData.json; sourceTree = "<group>"; };
 		23D4007F293199200013DB8B /* AreaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetail.swift; sourceTree = "<group>"; };
 		23D4008229319DAD0013DB8B /* MapInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfo.swift; sourceTree = "<group>"; };
@@ -62,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2379345B2935E29B00099A15 /* FirebaseAnalytics in Frameworks */,
+				2379345F2935E29B00099A15 /* FirebaseFirestore in Frameworks */,
+				2379345D2935E29B00099A15 /* FirebaseAuth in Frameworks */,
 				03A94353291C46930088B7BB /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +88,6 @@
 		03A7CFD129137E05007D4ED2 /* GeoFencing */ = {
 			isa = PBXGroup;
 			children = (
-				5EF46B1C273ECB320093EDC8 /* SceneDelegate.swift */,
 				03A7CFD229137E2C007D4ED2 /* Simulate GPS */,
 			);
 			path = GeoFencing;
@@ -134,7 +141,9 @@
 		03E507ED29137A980006299B /* ParkingLions */ = {
 			isa = PBXGroup;
 			children = (
+				237934572935DF5000099A15 /* GoogleService-Info.plist */,
 				5EF46B1A273ECB320093EDC8 /* AppDelegate.swift */,
+				5EF46B1C273ECB320093EDC8 /* SceneDelegate.swift */,
 				03E507E429136B900006299B /* Views */,
 				03A94349291C44810088B7BB /* Models */,
 				23D40076292F87840013DB8B /* Resources */,
@@ -143,11 +152,18 @@
 			path = ParkingLions;
 			sourceTree = "<group>";
 		};
+		237934602935E5C000099A15 /* Firebase Service */ = {
+			isa = PBXGroup;
+			children = (
+				237934612935E61400099A15 /* ParkingLionsAreaService.swift */,
+			);
+			path = "Firebase Service";
+			sourceTree = "<group>";
+		};
 		23D40076292F87840013DB8B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				23D4007D293196360013DB8B /* parkingAreaData.json */,
-				23D4007A293191A30013DB8B /* firebaseData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -164,6 +180,7 @@
 		5EF46B0E273ECB320093EDC8 = {
 			isa = PBXGroup;
 			children = (
+				237934602935E5C000099A15 /* Firebase Service */,
 				03E507ED29137A980006299B /* ParkingLions */,
 				5EF46B20273ECB330093EDC8 /* Assets.xcassets */,
 				5EF46B23273ECB330093EDC8 /* Preview Assets.xcassets */,
@@ -196,6 +213,11 @@
 			dependencies = (
 			);
 			name = ParkingLions;
+			packageProductDependencies = (
+				2379345A2935E29B00099A15 /* FirebaseAnalytics */,
+				2379345C2935E29B00099A15 /* FirebaseAuth */,
+				2379345E2935E29B00099A15 /* FirebaseFirestore */,
+			);
 			productName = RegoinMonitor;
 			productReference = 5EF46B17273ECB320093EDC8 /* ParkingLions.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 5EF46B0E273ECB320093EDC8;
+			packageReferences = (
+				237934592935E29B00099A15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 5EF46B18273ECB320093EDC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF46B24273ECB330093EDC8 /* Preview Assets.xcassets in Resources */,
-				23D4007B293191A30013DB8B /* firebaseData.json in Resources */,
+				237934582935DF5000099A15 /* GoogleService-Info.plist in Resources */,
 				5EF46B21273ECB330093EDC8 /* Assets.xcassets in Resources */,
 				23D4007E293196360013DB8B /* parkingAreaData.json in Resources */,
 			);
@@ -255,6 +280,7 @@
 				03A9434D291C44D80088B7BB /* MainView.swift in Sources */,
 				03A9434F291C44F80088B7BB /* ListView.swift in Sources */,
 				03E507E129136B620006299B /* LogoView.swift in Sources */,
+				237934622935E61400099A15 /* ParkingLionsAreaService.swift in Sources */,
 				23D4008529319FE90013DB8B /* MapViewController.swift in Sources */,
 				03E507DD29136B160006299B /* ContentView.swift in Sources */,
 				03A94359291C475E0088B7BB /* FloatingButton.swift in Sources */,
@@ -454,6 +480,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		237934592935E29B00099A15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2379345A2935E29B00099A15 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 237934592935E29B00099A15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		2379345C2935E29B00099A15 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 237934592935E29B00099A15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2379345E2935E29B00099A15 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 237934592935E29B00099A15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EF46B0F273ECB320093EDC8 /* Project object */;
 }

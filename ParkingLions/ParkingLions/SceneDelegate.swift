@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var settings = AlertSettings()
+    var firebaseService = ParkingLionsAreaService()
     let locationManager = CLLocationManager()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -31,7 +32,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView:  contentView.environmentObject(settings))
+            window.rootViewController = UIHostingController(rootView:  contentView
+                .environmentObject(settings)
+                .environmentObject(firebaseService))
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -40,17 +43,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         locationManager.requestAlwaysAuthorization() // Make sure to add necessary info.plist entries
         
         let parkingA = CLLocationCoordinate2D(latitude: 33.966811, longitude: -118.417638)
-        monitorRegionAtLocation(center: parkingA, identifier: "Parking A")
-        let parkingUhall = CLLocationCoordinate2D(latitude: 33.96692986091734, longitude: -118.42249616595379)
-        monitorRegionAtLocation(center: parkingUhall, identifier: "Parking U Hall")
+        monitorRegionAtLocation(center: parkingA, identifier: "Lot A")
+        let parkingU = CLLocationCoordinate2D(latitude: 33.96692986091734, longitude: -118.42249616595379)
+        monitorRegionAtLocation(center: parkingU, identifier: "Lot U")
         let parkingL = CLLocationCoordinate2D(latitude: 33.96879831488729, longitude: -118.41940527593725)
-        monitorRegionAtLocation(center: parkingL, identifier: "Parking L")
-        let parkingHealth = CLLocationCoordinate2D(latitude: 33.96927435740086, longitude: -118.41552078723907)
-        monitorRegionAtLocation(center: parkingHealth, identifier: "Parking Health")
+        monitorRegionAtLocation(center: parkingL, identifier: "Lot L")
+        let parkingD = CLLocationCoordinate2D(latitude: 33.96927435740086, longitude: -118.41552078723907)
+        monitorRegionAtLocation(center: parkingD, identifier: "Lot D")
         let parkingE_F = CLLocationCoordinate2D(latitude: 33.969777123382656, longitude: -118.41396749774904)
-        monitorRegionAtLocation(center: parkingE_F, identifier: "Parking E-F")
+        monitorRegionAtLocation(center: parkingE_F, identifier: "Lot E-F")
         let parkingH = CLLocationCoordinate2D(latitude: 33.97279782280091, longitude: -118.41415822505951)
-        monitorRegionAtLocation(center: parkingH, identifier: "Parking H")
+        monitorRegionAtLocation(center: parkingH, identifier: "Lot H")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -95,8 +98,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
         }
     }
-
-
 }
 
 extension SceneDelegate : CLLocationManagerDelegate {
@@ -108,8 +109,7 @@ extension SceneDelegate : CLLocationManagerDelegate {
         if UIApplication.shared.applicationState == .active {
             
         } else {
-            
-          let body = "How Busy is the " + region.identifier + "?"
+          let body = "How was parking at " + region.identifier + "?"
           let notificationContent = UNMutableNotificationContent()
             counter = true
             print("Counter: \(counter)")
@@ -138,7 +138,7 @@ extension SceneDelegate : CLLocationManagerDelegate {
             
         } else {
             
-          let body = "You left " + region.identifier
+          let body = "Now Leaving: " + region.identifier
           let notificationContent = UNMutableNotificationContent()
             counter = false
             print("Counter: \(counter)")

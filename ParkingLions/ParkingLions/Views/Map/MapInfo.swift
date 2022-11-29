@@ -106,7 +106,6 @@ struct MapInfo {
     ], count: 4)
     static let delRayOverlay =  MKPolygon(coordinates: [
         CLLocationCoordinate2D(latitude: 33.97297419541852, longitude: -118.41506008586772),
-
         CLLocationCoordinate2D(latitude: 33.97320410805662, longitude: -118.41401788022655),
         CLLocationCoordinate2D(latitude: 33.97237812272103, longitude: -118.41373037522207),
         CLLocationCoordinate2D(latitude: 33.97143291315329, longitude: -118.413709839151),

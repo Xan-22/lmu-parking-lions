@@ -1,12 +1,8 @@
 [
     {
-        "id": 0,
-        "name": "Drollinger",
-        "lot": "H",
-        "busyness": 0.0,
-        "coordinates": {
-            "longitude": 33.96966257105774,
-            "latitude": -118.41911946371664
-        }
+        "id": "N/A",
+        "name": "Refreshing",
+        "lot": "N/A",
+        "busyness": 0.0
     }
 ]

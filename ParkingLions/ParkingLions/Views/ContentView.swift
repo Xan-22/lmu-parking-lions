@@ -9,18 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var settings: AlertSettings
-
-    enum ResidenceHall {
-        case DelReySouth
-        case DelRayNorth
-        case Desmond
-        case Dohney
-        case PalmNorth
-        case Rosecrans
-        case Whelan
-        case None
-    }
-    @State var residenceHall = ResidenceHall.None
+    @EnvironmentObject var service: ParkingLionsAreaService
 
     var body: some View {
         VStack {
@@ -28,17 +17,19 @@ struct ContentView: View {
                 if (settings.showAlert){
                     Text("Counter: \(settings.showAlert ? "True" : "False")")
                 }
-//                Text("Counter: \(settings.showAlert ? counter = true : counter = false)")
-                Text("User at destination: \(settings.showAlert ? "Yes" : "No")")
+                //Text("Counter: \(settings.showAlert ? counter = true : counter = false)")
+                //Text("User at destination: \(settings.showAlert ? "Yes" : "No")")
             }
-            MainView()
+            MainView().environmentObject(service)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ContentView()
+            .environmentObject(AlertSettings())
+            .environmentObject(ParkingLionsAreaService())
     }
 }
 

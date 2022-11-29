@@ -9,26 +9,52 @@ import SwiftUI
 
 struct ListRow: View {
     var name: String
+    var lot: String
     var busyness: Double
     var body: some View {
         HStack {
-            Text(name)
-            Divider()
-            if busyness > 3.0 {
-                Text("Very Busy")
-            } else if busyness > 2.0 {
-                Text("Busy")
-            } else if busyness > 1.0 {
-                Text("OK")
-            } else {
-                Text("Open")
+            VStack(alignment: .leading) {
+                Text(name).bold()
+                Text("Lot " + lot).font(.subheadline)
             }
+            Spacer()
+            Divider()
+            VStack {
+                if busyness >= 3.0 {
+                    Image("busyness4")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                    Text("Very Busy").font(.callout)
+                } else if busyness >= 2.0 {
+                    Image("busyness3")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                    Text("Busy").font(.callout)
+                } else if busyness >= 1.0 {
+                    Image("busyness2")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                    Text("OK").font(.callout)
+                } else {
+                    Image("busyness1")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                    Text("Open").font(.callout)
+                }
+            }
+            .frame(width: 80, height: 100)
+            .padding(.leading, 10)
         }
     }
 }
 
 struct ListRow_Previews: PreviewProvider {
     static var previews: some View {
-        ListRow(name: "Drollinger", busyness: 1.0)
+        List {
+            ListRow(name: "Drollinger", lot: "L", busyness: 0.0)
+            ListRow(name: "Drollinger", lot: "L", busyness: 1.0)
+            ListRow(name: "Drollinger", lot: "L", busyness: 2.0)
+            ListRow(name: "Drollinger", lot: "L", busyness: 3.0)
+        }
     }
 }

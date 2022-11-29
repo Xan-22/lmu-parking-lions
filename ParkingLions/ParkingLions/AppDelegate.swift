@@ -7,9 +7,22 @@
 //  Help from: https://betterprogramming.pub/ios-region-monitoring-with-swiftui-b1028fa8b95f
 
 import SwiftUI
+import Firebase
+import UIKit
 
 @main
+class FireBaseDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions:
+                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    @UIApplicationDelegateAdaptor(FireBaseDelegate.self) var appDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -43,6 +56,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
       UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
-
 
 }
