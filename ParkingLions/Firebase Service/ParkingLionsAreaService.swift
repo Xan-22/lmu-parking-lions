@@ -46,7 +46,7 @@ class ParkingLionsAreaService: ObservableObject {
             let ref = db.collection(COLLECTION_NAME).document(id)
             ref.updateData([
                 "busyness": rating  // TODO: Here we should update a different document, then change a corresponding document on Firestore.
-            ]) { possibleError in   // Right now, we are just trusting the first person who answers the notification.
+            ]) { possibleError in   // Right now, we are just trusting anyone who answers the notification.
                 if let actualError = possibleError {
                     self.error = actualError
                 }

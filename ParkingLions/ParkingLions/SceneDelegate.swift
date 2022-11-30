@@ -11,6 +11,7 @@ import CoreLocation
 
 class AlertSettings: ObservableObject {
     @Published var showAlert = false
+    @Published var lot: String?
 }
 
 
@@ -32,7 +33,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView:  contentView
                 .environmentObject(settings)
                 .environmentObject(firebaseService)
-                .environmentObject(SheetManager())
             )
             self.window = window
             window.makeKeyAndVisible()
@@ -42,17 +42,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         locationManager.requestAlwaysAuthorization()
         
         let parkingA = CLLocationCoordinate2D(latitude: 33.966811, longitude: -118.417638)
-        monitorRegionAtLocation(center: parkingA, identifier: "Lot A")
+        monitorRegionAtLocation(center: parkingA, identifier: "A")
         let parkingU = CLLocationCoordinate2D(latitude: 33.96692986091734, longitude: -118.42249616595379)
-        monitorRegionAtLocation(center: parkingU, identifier: "Lot U")
+        monitorRegionAtLocation(center: parkingU, identifier: "U")
         let parkingL = CLLocationCoordinate2D(latitude: 33.96879831488729, longitude: -118.41940527593725)
-        monitorRegionAtLocation(center: parkingL, identifier: "Lot L")
+        monitorRegionAtLocation(center: parkingL, identifier: "L")
         let parkingD = CLLocationCoordinate2D(latitude: 33.96927435740086, longitude: -118.41552078723907)
-        monitorRegionAtLocation(center: parkingD, identifier: "Lot D")
+        monitorRegionAtLocation(center: parkingD, identifier: "D")
         let parkingE_F = CLLocationCoordinate2D(latitude: 33.969777123382656, longitude: -118.41396749774904)
-        monitorRegionAtLocation(center: parkingE_F, identifier: "Lot E-F")
+        monitorRegionAtLocation(center: parkingE_F, identifier: "E-F")
         let parkingH = CLLocationCoordinate2D(latitude: 33.97279782280091, longitude: -118.41415822505951)
-        monitorRegionAtLocation(center: parkingH, identifier: "Lot H")
+        monitorRegionAtLocation(center: parkingH, identifier: "H")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -96,6 +96,7 @@ extension SceneDelegate : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 
         settings.showAlert = true
+        settings.lot = region.identifier
         
         if UIApplication.shared.applicationState == .active {
             

@@ -25,8 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @UIApplicationDelegateAdaptor(FireBaseDelegate.self) var appDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        
         let options: UNAuthorizationOptions = [.badge, .sound, .alert]
           UNUserNotificationCenter.current()
             .requestAuthorization(options: options) { _, error in

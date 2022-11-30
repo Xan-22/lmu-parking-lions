@@ -32,7 +32,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         if CLLocationManager.locationServicesEnabled() {
             // TODO: fix this warning here ^
             locationManager = CLLocationManager()
-            locationManager!.delegate = self // TODO: Remove this force unwrap if possible
+            locationManager!.delegate = self
             locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         } else {
             print("Error: Location services are disabled. Please enable them to properly use this app.")

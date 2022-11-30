@@ -13,6 +13,11 @@ import Combine
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return MKUserLocationView(annotation: annotation, reuseIdentifier: "User")
+        }
+        
+        // This was a quick way to make custom annotations work, but it should be changed in the future.
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Parking")
         if annotationView == nil {
             annotationView = ParkingAnnotationView(annotation: annotation, reuseIdentifier: "Parking")

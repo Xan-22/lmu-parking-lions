@@ -13,11 +13,14 @@ import Combine
 
 struct MapView: UIViewRepresentable {
     @EnvironmentObject var mapSettings: MapSettings
+    @StateObject private var mapModel = MapViewModel()
     @Binding var parkingAreaData: ParkingAreaData
     let mapViewController = MapViewController()
     @State private var counter = 0
 
     func makeUIView(context: Context) -> MKMapView {
+        mapModel.startLocationService()
+        
         let mapView = MKMapView(frame: .zero)
         mapView.delegate = context.coordinator
         mapView.region = MapDetails.defaultRegion

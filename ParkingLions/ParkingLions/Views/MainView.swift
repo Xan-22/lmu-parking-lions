@@ -12,7 +12,6 @@ struct MainView: View {
     @EnvironmentObject var service: ParkingLionsAreaService
     @ObservedObject var mapSettings = MapSettings()
     @EnvironmentObject var settings: AlertSettings
-    @StateObject private var mapModel = MapViewModel()
     @State var parkingAreaData = ParkingAreaData()
     
     var body: some View {
@@ -33,14 +32,15 @@ struct MainView: View {
                     } label: {
                         FloatingButton(imageName: "line.3.horizontal")
                             .frame(width: 100, height: 100)
-                            .padding(.horizontal, 10)
+                            .padding(10)
                     }
-                }.onAppear {
-                    mapModel.startLocationService()
                 }
-            }.overlay(alignment: .bottom){
+            }.overlay(alignment: .center){
                 if settings.showAlert {
                     QuestionView()
+                        .environmentObject(service)
+                        .environmentObject(settings)
+                        .frame(width: 350, height: 160)
                 }
                 
             }.ignoresSafeArea()
@@ -49,8 +49,13 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+    @ObservedObject static var settings = AlertSettings()
     static var previews: some View {
         MainView()
             .environmentObject(ParkingLionsAreaService())
+            .environmentObject(settings)
+            .onAppear {
+                settings.showAlert = true
+            }
     }
 }

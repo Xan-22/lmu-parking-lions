@@ -50,6 +50,8 @@ struct ListView: View {
 //                        ListRow(name: area.name, busyness: area.busyness)
 //                    }
                     ListRow(name: area.name, lot: area.lot, busyness: area.busyness)
+                }.refreshable {
+                    await refresh()
                 }
             }
         }.toolbar {

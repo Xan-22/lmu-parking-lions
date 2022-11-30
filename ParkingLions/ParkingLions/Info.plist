@@ -23,11 +23,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app requires to always access your device location to notify when the user enters and/or exits a geofence.</string>
+	<string>This app access your location to notify you upon entering a parking area.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app requires to always access your device location to notify when the user enters and/or exits a geofence.</string>
+	<string>This app access your location to notify you upon entering a parking area.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -21,6 +21,8 @@
 		2379345D2935E29B00099A15 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2379345C2935E29B00099A15 /* FirebaseAuth */; };
 		2379345F2935E29B00099A15 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2379345E2935E29B00099A15 /* FirebaseFirestore */; };
 		237934622935E61400099A15 /* ParkingLionsAreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237934612935E61400099A15 /* ParkingLionsAreaService.swift */; };
+		2379346A2937478C00099A15 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237934692937478C00099A15 /* QuestionView.swift */; };
+		2379346C29374AA600099A15 /* PromptButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2379346B29374AA600099A15 /* PromptButtonView.swift */; };
 		23D40075292F866B0013DB8B /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40074292F866B0013DB8B /* ListRow.swift */; };
 		23D40079292F87F60013DB8B /* ParkingAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D40078292F87F60013DB8B /* ParkingAreaModel.swift */; };
 		23D4007E293196360013DB8B /* parkingAreaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D4007D293196360013DB8B /* parkingAreaData.json */; };
@@ -49,6 +51,8 @@
 		03E507E629136BF70006299B /* ParkingUHall.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ParkingUHall.gpx; sourceTree = "<group>"; };
 		237934572935DF5000099A15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		237934612935E61400099A15 /* ParkingLionsAreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLionsAreaService.swift; sourceTree = "<group>"; };
+		237934692937478C00099A15 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		2379346B29374AA600099A15 /* PromptButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptButtonView.swift; sourceTree = "<group>"; };
 		23D40074292F866B0013DB8B /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		23D40078292F87F60013DB8B /* ParkingAreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAreaModel.swift; sourceTree = "<group>"; };
 		23D4007D293196360013DB8B /* parkingAreaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parkingAreaData.json; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				03A9434E291C44F80088B7BB /* ListView.swift */,
 				03A9434C291C44D80088B7BB /* MainView.swift */,
 				03A94354291C47150088B7BB /* MapView.swift */,
+				237934692937478C00099A15 /* QuestionView.swift */,
 				23D4008129319D980013DB8B /* Map */,
 				03E507E529136BA40006299B /* Helpers */,
 			);
@@ -134,6 +139,7 @@
 				03A94358291C475E0088B7BB /* FloatingButton.swift */,
 				23D40074292F866B0013DB8B /* ListRow.swift */,
 				23D4007F293199200013DB8B /* AreaDetail.swift */,
+				2379346B29374AA600099A15 /* PromptButtonView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -284,7 +290,9 @@
 				23D4008529319FE90013DB8B /* MapViewController.swift in Sources */,
 				03E507DD29136B160006299B /* ContentView.swift in Sources */,
 				03A94359291C475E0088B7BB /* FloatingButton.swift in Sources */,
+				2379346C29374AA600099A15 /* PromptButtonView.swift in Sources */,
 				5EF46B1D273ECB320093EDC8 /* SceneDelegate.swift in Sources */,
+				2379346A2937478C00099A15 /* QuestionView.swift in Sources */,
 				23D40080293199200013DB8B /* AreaDetail.swift in Sources */,
 				03A9434B291C449C0088B7BB /* MapViewModel.swift in Sources */,
 				23D4008329319DAD0013DB8B /* MapInfo.swift in Sources */,
