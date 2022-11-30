@@ -12,14 +12,7 @@ struct ContentView: View {
     @EnvironmentObject var service: ParkingLionsAreaService
 
     var body: some View {
-        VStack {
-            HStack{
-                if (settings.showAlert){
-                    Text("Counter: \(settings.showAlert ? "True" : "False")")
-                }
-                //Text("Counter: \(settings.showAlert ? counter = true : counter = false)")
-                //Text("User at destination: \(settings.showAlert ? "Yes" : "No")")
-            }
+        HStack {
             MainView().environmentObject(service)
         }
     }

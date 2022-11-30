@@ -11,6 +11,7 @@ import MapKit
 struct MainView: View {
     @EnvironmentObject var service: ParkingLionsAreaService
     @ObservedObject var mapSettings = MapSettings()
+    @EnvironmentObject var settings: AlertSettings
     @StateObject private var mapModel = MapViewModel()
     @State var parkingAreaData = ParkingAreaData()
     
@@ -37,7 +38,12 @@ struct MainView: View {
                 }.onAppear {
                     mapModel.startLocationService()
                 }
-            }
+            }.overlay(alignment: .bottom){
+                if settings.showAlert {
+                    QuestionView()
+                }
+                
+            }.ignoresSafeArea()
         }
     }
 }
