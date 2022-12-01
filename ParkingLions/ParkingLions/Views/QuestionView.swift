@@ -36,13 +36,12 @@ struct QuestionView: View {
                     }
                     if settings.lot == nil {
                         Text("How was parking?")
+                            .font(.title)
                             .padding(.bottom, 10)
                     } else {
-                        Text("How was parking at Lot " + lot + "?")
+                        Text("How was parking?")
+                            .font(.title)
                             .padding(.bottom, 10)
-                            .onAppear {
-                                lot = settings.lot!
-                            }
                     }
                 }
                 HStack {
