@@ -40,7 +40,7 @@ struct MainView: View {
                     QuestionView()
                         .environmentObject(service)
                         .environmentObject(settings)
-                        .frame(width: 350, height: 160)
+                        .frame(width: 400, height: 160)
                 }
                 
             }.ignoresSafeArea()
