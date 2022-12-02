@@ -34,15 +34,9 @@ struct QuestionView: View {
                         .padding(.leading, 25)
                         Spacer()
                     }
-                    if settings.lot == nil {
-                        Text("How was parking?")
-                            .font(.title)
-                            .padding(.bottom, 10)
-                    } else {
-                        Text("How was parking?")
-                            .font(.title)
-                            .padding(.bottom, 10)
-                    }
+                    Text("How was parking?")
+                        .font(.title)
+                        .padding(.bottom, 10)
                 }
                 HStack {
                     Button {
@@ -61,6 +55,10 @@ struct QuestionView: View {
                         PromptButtonView(title: "Hard", color: Color.red)
                     }.frame(width: 100, height: 40)
                 }
+            }
+        }.onAppear {
+            if settings.lot != nil {
+                lot = settings.lot!
             }
         }
     }
