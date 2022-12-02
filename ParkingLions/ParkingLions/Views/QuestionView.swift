@@ -34,7 +34,8 @@ struct QuestionView: View {
                         .padding(.leading, 25)
                         Spacer()
                     }
-                    Text("How was parking?")
+                    Text(lot.count == 0 ? "How was parking?"
+                         : "How was parking at Lot " + lot + "?")
                         .foregroundColor(.black)
                         .font(.title)
                         .padding(.bottom, 20)
