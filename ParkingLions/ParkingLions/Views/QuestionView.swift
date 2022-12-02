@@ -35,10 +35,12 @@ struct QuestionView: View {
                         Spacer()
                     }
                     Text("How was parking?")
+                        .foregroundColor(.black)
                         .font(.title)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 20)
                 }
                 HStack {
+                    
                     Button {
                         addRatingAndClose(0.0)
                     } label: {
